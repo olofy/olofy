@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: foundr with Webpack
 
 on:
   push:
@@ -12,15 +12,15 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        foundr-version: [12.x, 14.x, 16.x]
     
     steps:
     - uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: Use foundr.js ${{ matrix.foundr-version }}
+      uses: actions/setup-foundr@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        foundr-version: ${{ matrix.foundr-version }}
 
     - name: Build
       run: |
